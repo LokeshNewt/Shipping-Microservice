@@ -3,7 +3,6 @@ package com.newt.controller;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -12,19 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
- 
- 
-import com.newt.model.Orders;
-import com.newt.repository.OrderRepository;
+import org.springframework.stereotype.Service; 
+import com.newt.model.Orders; 
+import com.newt.repository.ShippingRepository;
 import com.wordnik.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/orders")
-public class OrderController {
+@RequestMapping("/shipping")
+public class ShippingController {
 	
 	@Autowired
-	private OrderRepository orderRepository;
+	private ShippingRepository orderRepository;
 	@Autowired
     private Notifications notifications;
     
